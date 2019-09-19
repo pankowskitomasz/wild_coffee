@@ -1,0 +1,28 @@
+@mixin include-class($classArr,$classB){
+    @for $i from 1 through length($classArr){
+        .#{nth($classArr,$i)}{
+            @extend #{$classB};
+        }
+    }
+}
+
+@mixin set-background($imgA){
+    background-image: url(#{$imgA});
+    background-position: center center;
+    background-size: cover;
+}
+
+@mixin set-calc-height($baseHeightA, $subValA){
+    height: calc(#{$baseHeightA} - #{$subValA});
+    height: -o-calc(#{$baseHeightA} - #{$subValA});
+    height: -moz-calc(#{$baseHeightA} - #{$subValA});
+    height: -webkit-calc(#{$baseHeightA} - #{$subValA});
+}
+
+@mixin set-height($classArr,$heightA){
+    @for $i from 1 through length($classArr){
+        .#{nth($classArr,$i)}{
+            min-height: #{$heightA};
+        }
+    }
+}

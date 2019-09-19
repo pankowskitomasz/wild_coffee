@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+}
+
+.section-top-fit{
+    @include set-calc-height($full-height,$navbar-height);
+}
+
+@include include-class($section-top-height,".section-top-fit");
+@include set-height($section-full-height,$full-height);
+@include set-height($section-third-height,$third-height);
