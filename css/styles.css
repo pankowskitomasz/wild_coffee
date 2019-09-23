@@ -1,0 +1,485 @@
+/* cyrillic */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(../fonts/TUZyzwprpvBS1izr_vOEDuSfQZQ.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(../fonts/TUZyzwprpvBS1izr_vOECOSfQZQ.woff2) format("woff2");
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(../fonts/TUZyzwprpvBS1izr_vOEBeSfQZQ.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(../fonts/TUZyzwprpvBS1izr_vOEBOSfQZQ.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(../fonts/TUZyzwprpvBS1izr_vOECuSf.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Josefin Sans Regular"), local("JosefinSans-Regular"), url(../fonts/Qw3aZQNVED7rKGKxtqIqX5EUAnx4RHw.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Josefin Sans Regular"), local("JosefinSans-Regular"), url(../fonts/Qw3aZQNVED7rKGKxtqIqX5EUA3x4RHw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Josefin Sans Regular"), local("JosefinSans-Regular"), url(../fonts/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Righteous"), local("Righteous-Regular"), url(../fonts/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Righteous"), local("Righteous-Regular"), url(../fonts/1cXxaUPXBpj2rGoU7C9WiHGF.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Satisfy Regular"), local("Satisfy-Regular"), url(../fonts/rP2Hp2yn6lkG50LoCZOIHQ.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* line 1, ../sass/partials/_layout.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/partials/_layout.scss */
+body, html {
+  height: 100%;
+}
+
+/* line 8, ../sass/partials/_layout.scss */
+.section-top-fit, .index-s1 {
+  height: calc(100vh - 60px);
+  height: -o-calc(100vh - 60px);
+  height: -moz-calc(100vh - 60px);
+  height: -webkit-calc(100vh - 60px);
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.about-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.blog-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.brewing-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.chocolate-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.coffee-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.confirm-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.contact-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.error-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.index-s2 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.newsletter-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.press-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.privacy-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.sweets-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.spices-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.index-s3 {
+  min-height: 33vh;
+}
+
+/* line 1, ../sass/partials/_modules.scss */
+#map-container {
+  min-height: 50vh;
+  width: 100%;
+}
+
+/* line 5, ../sass/partials/_modules.scss */
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+/* line 8, ../sass/partials/_modules.scss */
+.brewing-s1 {
+  background-image: url(../img/brewing-s1-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 11, ../sass/partials/_modules.scss */
+.chocolate-s1 {
+  background-image: url(../img/chocolate-s1-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 14, ../sass/partials/_modules.scss */
+.coffee-s1 {
+  background-image: url(../img/coffee-s1-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 17, ../sass/partials/_modules.scss */
+.confirm-s1 {
+  background-image: url(../img/error-s1-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 21, ../sass/partials/_modules.scss */
+.dropdown-item:active {
+  background-color: #333;
+}
+
+/* line 25, ../sass/partials/_modules.scss */
+.error-s1 {
+  background-image: url(../img/error-s1-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 29, ../sass/partials/_modules.scss */
+.fit-contain {
+  object-fit: contain;
+}
+/* line 32, ../sass/partials/_modules.scss */
+.fit-cover {
+  object-fit: cover;
+}
+
+/* line 37, ../sass/partials/_modules.scss */
+.font-header {
+  font-family: "Righteous", cursive;
+}
+/* line 40, ../sass/partials/_modules.scss */
+.font-menu {
+  font-family: "Josefin Sans", sans-serif;
+}
+/* line 43, ../sass/partials/_modules.scss */
+.font-sign {
+  font-family: "Satisfy", cursive;
+}
+/* line 46, ../sass/partials/_modules.scss */
+.font-text {
+  font-family: "Amatic SC", cursive;
+}
+
+/* line 51, ../sass/partials/_modules.scss */
+.h-33vh {
+  min-height: 33.33vh;
+}
+/* line 54, ../sass/partials/_modules.scss */
+.h-50vh {
+  min-height: 50vh;
+}
+/* line 57, ../sass/partials/_modules.scss */
+.h-100vh {
+  min-height: 100vh;
+}
+
+/* line 63, ../sass/partials/_modules.scss */
+.hover-light:hover {
+  filter: brightness(2);
+}
+
+/* line 69, ../sass/partials/_modules.scss */
+.icon-list .fa {
+  font-size: 25px;
+}
+/* line 72, ../sass/partials/_modules.scss */
+.icon-list a {
+  color: #fff;
+}
+
+/* line 77, ../sass/partials/_modules.scss */
+.img-fit {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* line 82, ../sass/partials/_modules.scss */
+.index-s2 {
+  background-image: url(../img/index-s2/bg-xs.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 87, ../sass/partials/_modules.scss */
+.index-s3__col-about {
+  background-image: url(../img/index-s3/about-bg-xs.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+/* line 90, ../sass/partials/_modules.scss */
+.index-s3__col-press {
+  background-image: url(../img/index-s3/press-bg-xs.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+/* line 93, ../sass/partials/_modules.scss */
+.index-s3__col-blog {
+  background-image: url(../img/index-s3/blog-bg-xs.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 99, ../sass/partials/_modules.scss */
+.link:hover, .icon-list a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+/* line 103, ../sass/partials/_modules.scss */
+.link-white {
+  color: #fff !important;
+}
+
+/* line 108, ../sass/partials/_modules.scss */
+.opacity-8 {
+  opacity: 0.8;
+}
+/* line 111, ../sass/partials/_modules.scss */
+.opacity-9 {
+  opacity: 0.9;
+}
+
+/* line 115, ../sass/partials/_modules.scss */
+.spices-s1 {
+  background-image: url(../img/spices-s1-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 118, ../sass/partials/_modules.scss */
+.sweets-s1 {
+  background-image: url(../img/sweets-s1-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 121, ../sass/partials/_modules.scss */
+fieldset {
+  margin-bottom: 15px;
+}
+
+/* line 124, ../sass/partials/_modules.scss */
+input {
+  margin-bottom: 5px;
+}
+
+/* line 127, ../sass/partials/_modules.scss */
+textarea {
+  height: 150px !important;
+  resize: none;
+}
+
+@media all and (min-width: 576px) {
+  /* line 134, ../sass/partials/_modules.scss */
+  .h-sm-33vh {
+    min-height: 33.33vh;
+  }
+  /* line 137, ../sass/partials/_modules.scss */
+  .h-sm-50vh {
+    min-height: 50vh;
+  }
+  /* line 140, ../sass/partials/_modules.scss */
+  .h-sm-100vh {
+    min-height: 100vh;
+  }
+
+  /* line 145, ../sass/partials/_modules.scss */
+  .index-s2 {
+    background-image: url(../img/index-s2/bg-sm.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /* line 150, ../sass/partials/_modules.scss */
+  .index-s3__col-about {
+    background-image: url(../img/index-s3/about-bg-sm.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  /* line 153, ../sass/partials/_modules.scss */
+  .index-s3__col-press {
+    background-image: url(../img/index-s3/press-bg-sm.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  /* line 156, ../sass/partials/_modules.scss */
+  .index-s3__col-blog {
+    background-image: url(../img/index-s3/blog-bg-sm.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media all and (min-width: 768px) {
+  /* line 165, ../sass/partials/_modules.scss */
+  .h-md-33vh {
+    min-height: 33.33vh;
+  }
+  /* line 168, ../sass/partials/_modules.scss */
+  .h-md-50vh {
+    min-height: 50vh;
+  }
+  /* line 171, ../sass/partials/_modules.scss */
+  .h-md-100vh {
+    min-height: 100vh;
+  }
+
+  /* line 176, ../sass/partials/_modules.scss */
+  .index-s2 {
+    background-image: url(../img/index-s2/bg-md.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /* line 181, ../sass/partials/_modules.scss */
+  .index-s3__col-about {
+    background-image: url(../img/index-s3/about-bg-md.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  /* line 184, ../sass/partials/_modules.scss */
+  .index-s3__col-press {
+    background-image: url(../img/index-s3/press-bg-md.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  /* line 187, ../sass/partials/_modules.scss */
+  .index-s3__col-blog {
+    background-image: url(../img/index-s3/blog-bg-md.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media all and (min-width: 992px) {
+  /* line 194, ../sass/partials/_modules.scss */
+  .index-s2 {
+    background-image: url(../img/index-s2/bg-lg.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /* line 199, ../sass/partials/_modules.scss */
+  .index-s3__col-about {
+    background-image: url(../img/index-s3/about-bg-lg.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  /* line 202, ../sass/partials/_modules.scss */
+  .index-s3__col-press {
+    background-image: url(../img/index-s3/press-bg-lg.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  /* line 205, ../sass/partials/_modules.scss */
+  .index-s3__col-blog {
+    background-image: url(../img/index-s3/blog-bg-lg.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+}
