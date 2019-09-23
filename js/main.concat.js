@@ -73,7 +73,7 @@ function checkForm(){
 }
 
 function swapTarget(){
-    $("form").eq(0).attr("action","confirm.php");
+    $("form").not(".form-newsletter,.form-user").eq(0).attr("action","confirm.php");
 }
 
 function setCookie(cname, cvalue, exdays) {

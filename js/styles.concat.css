@@ -168,6 +168,11 @@ body, html {
 }
 
 /* line 24, ../sass/partials/_mixins.scss */
+.newsletter-s1 {
+  min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
 .press-s1 {
   min-height: 100vh;
 }

@@ -1,3 +1,72 @@
+<?php
+
+session_start();
+include_once "php/comm.php";
+include_once "php/db.php";
+include_once "php/t_newsletter.php";
+include_once "php/t_user.php";
+
+//check user login data
+if(isset($_POST["username"])
+&& isset($_POST["userpass"])){
+    DatabaseConnect();
+    $usr = new TUser($GLOBALS['connection']);   
+    $usr->getByName(htmlspecialchars($_POST["username"]));
+    if($usr->getData("username")===htmlspecialchars($_POST['username'])
+    && $usr->getData("password")===sha1(htmlspecialchars($_POST['userpass']))
+    ){
+        $_SESSION["UserLogged"] = $usr->getData("username");
+    }
+}
+
+if(isset($_SESSION["UserLogged"])){
+    //reading view config
+    if(isset($_POST["login"])){
+        $_SESSION["view"] = "dashboard";
+    }
+    if(isset($_POST["newsletter"])){
+        $_SESSION["view"] = "newsletter";
+    }
+    if(isset($_POST["users"])){
+        $_SESSION["view"] = "users";
+    }
+    if(isset($_POST["edituser"])){
+        $_SESSION["view"] = "edituser";
+    }
+    if(isset($_POST["logout"])){
+        $_SESSION["view"] = "logout";
+    }
+    
+    //template selection and config
+    if(isset($_SESSION["view"])){
+        switch($_SESSION["view"]){
+            case "newsletter":
+                $_SESSION["viewTemplate"] = "templates/tmp_newsletter.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "users":
+                $_SESSION["viewTemplate"] = "templates/tmp_users.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "dashboard":
+                $_SESSION["viewTemplate"] = "templates/tmp_dashboard.php";
+                $_SESSION["CurrentPage"]=1;
+                break;
+            case "edituser":
+                $_SESSION["viewTemplate"] = "templates/tmp_edituser.php";
+                break;
+            default: 
+                $_SESSION["viewTemplate"] = "templates/tmp_login.php";     
+                $_SESSION = array();
+                session_destroy(); 
+        }
+    }
+}
+else{
+    $_SESSION["viewTemplate"] = "templates/tmp_login.php";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,133 +168,28 @@
             </ul>
         </div>
     </nav>
-    <section class="container-fluid index-s1 section-top-fit bg-secondary">
-        <div class="row section-top-fit">
-            <div class="carousel slide w-100 h-100" data-ride="car ousel" id="index-s1__carousel">
-                <ol class="carousel-indicators">
-                    <li class="active"
-                        data-target="#index-s1__carousel"
-                        data-slide-to="0">
-                    </li>
-                    <li data-target="#index-s1__carousel"
-                        data-slide-to="1">
-                    </li>
-                    <li data-target="#index-s1__carousel"
-                        data-slide-to="2">
-                    </li>
-                </ol>
-                <div class="carousel-inner h-100">
-                    <div class="carousel-item h-100 active">
-                        <picture>
-                            <source media="(min-width:576px)"
-                                srcset="img/index-s1/slide-1-md.jpg">
-                            <source media="(min-width:768px"
-                                srcset="img/index-s1/slide-1-lg.jpg">
-                            <source media="(min-width:992px)"
-                                srcset="img/index-s1/slide-1-xl.jpg">
-                            <img class="img-fluid img-fit"
-                                src="img/index-s1/slide-1-sm.jpg"
-                                alt="slide">  
-                        </picture>                      
-                        <div class="carousel-caption">
-                            <p class="h3 font-weight-bold">
-                                Shop ethical, delicious coffee                    
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item h-100">
-                        <picture>
-                            <source media="(min-width:576px)"
-                                srcset="img/index-s1/slide-2-md.jpg">
-                            <source media="(min-width:768px"
-                                srcset="img/index-s1/slide-2-lg.jpg">
-                            <source media="(min-width:992px)"
-                                srcset="img/index-s1/slide-2-xl.jpg">
-                            <img class="img-fluid img-fit"
-                                src="img/index-s1/slide-2-sm.jpg"
-                                alt="slide">  
-                        </picture>                      
-                        <div class="carousel-caption">
-                            <p class="h3 font-weight-bold">
-                                Wild Coffee<br/>
-                                Every bean counts                                       
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-item h-100">
-                        <picture>
-                            <source media="(min-width:576px)"
-                                srcset="img/index-s1/slide-3-md.jpg">
-                            <source media="(min-width:768px"
-                                srcset="img/index-s1/slide-3-lg.jpg">
-                            <source media="(min-width:992px)"
-                                srcset="img/index-s1/slide-3-xl.jpg">
-                            <img class="img-fluid img-fit"
-                                src="img/index-s1/slide-3-sm.jpg"
-                                alt="slide">  
-                        </picture>                      
-                        <div class="carousel-caption">
-                            <p class="h3 font-weight-bold">
-                                Find our coffee<br/>
-                                proudly served up at a cafe near you                                                                    
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <a href="#index-s1__carousel"
-                    class="carousel-control-prev"
-                    data-target="#index-s1__carousel"
-                    data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a href="#index-s1__carousel"
-                    class="carousel-control-next"
-                    data-target="#index-s1__carousel"
-                    data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
+    <section class="container-fluid user-s1 p-0">
+        <?php if(isset($_SESSION["UserLogged"])){ ?>
+        <div class="row font-menu w-100 mx-0">                    
+            <ul class="breadcrumb w-100">
+                <li class="breadcrumb-item">
+                    <?php if(isset($_SESSION["UserLogged"])){echo $_SESSION["UserLogged"];} ?>
+                </li>
+                <li class="breadcrumb-item">
+                    <?php if(isset($_SESSION["view"])){echo $_SESSION["view"];} ?>
+                </li>
+            </ul>
         </div>
+        <?php 
+            }
+            if(isset($_SESSION["viewTemplate"])){
+                include $_SESSION["viewTemplate"]; 
+            }
+            else{
+                include "templates/tmp_login.php";
+            }
+        ?>      
     </section>
-    <section class="container-fluid index-s2 bg-dark h-100 border-top border-bottom border-dark">
-        <div class="row h-100">
-            <blockquote class="blockquote my-auto mx-auto bg-white p-4 opacity-8 font-weight-bold">
-                I drink Wild Coffee because it fills two cups.<br/>
-                Mine, and the Farmer's.
-                <footer class="blockquote-footer text-right py-2">
-                    <span class="font-sign">John Athanas</span>, Wild Coffee Enthusiast
-                </footer>
-            </blockquote>
-        </div>
-    </section>
-    <section class="container-fluid index-s3 bg-secondary">
-        <div class="row">
-            <div class="col-12 col-md-4 index-s3__col-about h-33vh h-md-33vh p-0 hover-light">
-                <a class="link link-white w-100 h-100 align-items-center justify-content-center d-flex"
-                    href="about.html">
-                    <h3 class="text-white text-center font-weight-bold font-italic opacity-8">
-                        About
-                    </h3>                    
-                </a>
-            </div>
-            <div class="col-12 col-md-4 index-s3__col-press h-33vh h-md-33vh p-0 hover-light">
-                <a class="link link-white w-100 h-100 align-items-center justify-content-center d-flex"
-                    href="press.html">
-                    <h3 class="text-white text-center font-weight-bold font-italic opacity-8">
-                        Press
-                    </h3>                    
-                </a>
-            </div>
-            <div class="col-12 col-md-4 index-s3__col-blog h-33vh h-md-33vh p-0 hover-light">
-                <a class="link link-white w-100 h-100 align-items-center justify-content-center d-flex"
-                    href="blog.html">
-                    <h3 class="text-white text-center font-weight-bold font-italic opacity-8">
-                        Blog
-                    </h3>                    
-                </a>
-            </div>
-        </div>
-    </section> 
     <footer class="container-fluid bg-dark border-top border-secondary">
         <div class="row p-3">
             <div class="col-xs-12 col-sm-6 order-1 order-sm-0">
@@ -284,7 +248,46 @@
                 <a href="privacy.html" class="link link-white">Privacy &amp; Cookies</a>
             </div>
         </div>
-    </footer>    
+    </footer>   
+    <div class="modal" id="privacyModal">
+        <div class="modal-dialog text-menu font-menu">
+            <div class="modal-content p-2">
+                <div class="modal-header text-center">
+                    <h4 class="font-logo text-muted">GPDR Declaration</h4>
+                    <a href="#privacyModal" 
+                        data-target="#privacyModal"
+                        data-dismiss="modal"
+                        class="close">
+                        &times;
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <p class="initialism">
+                        This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
+                        in long term meaning (longer than needed for website operation during visitor's
+                        presence), any user (visitor) data.
+                    </p>
+                    <p class="initialism pt-2">
+                         All information collected during visitor's 
+                        presence on this website is used only for technical purposes, required for 
+                        correct operation of website or demonstration purposes related to technical 
+                        mechanisms and presentation of its operation... 
+                        <a href="privacy.html" class="text-secondary">More about privacy</a>
+                    </p>                        
+                    <p class="initialism pt-2">
+                        If you accept privacy policy please click button "accept". If you 
+                        refuse it, leave page by closing it in your web browser, please.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark mx-auto"
+                        onclick="acceptPrivacyPolicy()">
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>   
     <script type="text/javascript"
         src="js/main.min.js">
     </script>

@@ -1,3 +1,47 @@
+<?php
+
+session_start();
+
+include_once "php/comm.php";
+include_once "php/db.php";
+include_once "php/t_newsletter.php";
+
+//initial config
+DatabaseConnect();
+$news = new TNewslettter($GLOBALS['connection'],'newsletter');
+$_SESSION["SubscriptionResult"]=null;
+if(!isset($_SESSION["SubscriptionCounter"])){
+    $_SESSION["SubscriptionCounter"]=0;
+}
+if(!isset($_SESSION["lastEmail"])){
+    $_SESSION["lastEmail"]="";
+}
+
+if($_SESSION["SubscriptionCounter"]<=SUB_LIMIT){
+    //below execution limit
+    if(isset($_POST["newsmail"])
+    && $_SESSION["lastEmail"]!==htmlspecialchars($_POST["newsmail"])){
+        $_SESSION['lastEmail'] = htmlspecialchars($_POST["newsmail"]);
+        if(!isset($_POST["unsubscribe"])){
+            $_SESSION["SubscriptionResult"] = $news->subscribe(htmlspecialchars($_POST["newsmail"]));
+        }
+        else{        
+            $_SESSION["SubscriptionResult"] = $news->unsubscribe(htmlspecialchars($_POST["newsmail"]));
+        }
+        $boxClassExt = "alert-info";
+        $_SESSION["SubscriptionCounter"]++;
+        $_SESSION["lastEmail"] = htmlspecialchars($_POST["newsmail"]);
+    }
+    $_SESSION["showForm"]=true;
+}
+else{
+    //when execution limit exceeded
+    $_SESSION["SubscriptionResult"] = "Subscription limit exceeded";
+    $_SESSION["showForm"]=false;
+    $boxClassExt = "alert-danger";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +58,7 @@
     <link rel="stylesheet"
         type="text/css"
         href="css/font-awesome.min.css">
-    <title>Wild coffee</title>
+    <title>Wild coffee | Newsletter</title>
 </head>
 <body class="font-text">
     <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-secondary shadow-lg">
@@ -39,13 +83,13 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#"
-                        class="nav-link dropdown-toggle"
+                        class="nav-link dropdown-toggle active"
                         data-toggle="dropdown">
                         Products
                     </a>
                     <div class="dropdown-menu">
                         <a href="products/coffee.html"
-                            class="dropdown-item">
+                            class="dropdown-item bg-secondary text-white">
                             Coffee
                         </a>
                         <a href="products/chocolate.html"
@@ -99,21 +143,53 @@
             </ul>
         </div>
     </nav>
-    <section class="container error-s1 d-flex">
-       <div class="row font-menu my-auto">
-            <div class="col-10 col-sm-8 col-md-6 offset-1 offset-sm-2 offset-md-3 text-center">
-                <div class="alert alert-danger">
-                    <h3 class="text-center font-header">Error!</h3>
-                    <p class="initialism">
-                        Unfortunately your message was not send due to technical 
-                        problems. Please try again later or contact with us 
-                        by phone.
-                    </p>                  
-                    <a href="contact.html" 
-                        class="btn btn-danger">Back</a>
-                </div>
+    <section class="container-fluid newsletter-s1 font-menu py-3 d-flex bg-fixed">
+        <div class="div my-auto w-100">
+            <div class="row">
+                <div class="col-12 col-sm-10 col-md-6 offset-sm-1 offset-md-3">
+                    <?php if(isset($_SESSION["SubscriptionResult"])){ ?>
+                        <div class="alert <?php echo $boxClassExt?> text-center">
+                            <?php echo $_SESSION["SubscriptionResult"]; ?>
+                        </div>
+                    <?php } ?>
+                    <?php if($_SESSION["showForm"]){ ?>
+                        <div class="card p-3">
+                            <form class="form-newsletter text-white mx-auto" 
+                                action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+                                autocomplete="off"
+                                method="post"
+                                required>
+                                <div class="form-group font-header text-dark">
+                                    <label>Join our mailing list</label>
+                                    <div class="input-group">
+                                        <input class="form-control" 
+                                            maxlength="80"
+                                            name="newsmail" 
+                                            type="email"
+                                            required>
+                                        <div class="input-group-append">
+                                            <input class="btn btn-outline-dark" 
+                                                type="submit" 
+                                                value="Send">                                    
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <small class="text-muted">
+                                            In order to cancel subscription, please enter your email,
+                                            check "unsubsribe" below and click "send".
+                                        </small>
+                                        <div class="form-check pt-1">
+                                            <input type="checkbox" name="unsubscribe" class="form-check-input">
+                                            <label class="form-check-label text-danger">Unsubscribe</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    <?php } ?>
+                </div>                
             </div>
-       </div>
+        </div>
     </section>
     <footer class="container-fluid bg-dark border-top border-secondary">
         <div class="row p-3">
@@ -142,7 +218,7 @@
             <div class="col-xs-12 col-sm-6 order-0 order-sm-1">
                 <div class="row">
                     <form class="form-newsletter text-white mx-auto mr-sm-0" 
-                        action="newsletter.php"
+                        action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
                         autocomplete="off"
                         method="post"
                         required>
@@ -153,7 +229,8 @@
                                     maxlength="80"
                                     name="newsmail" 
                                     type="email"
-                                    required>
+                                    required
+                                    disabled>
                                 <div class="input-group-append">
                                     <input  class="btn btn-outline-light" 
                                         type="submit" 
@@ -212,7 +289,7 @@
                 </div>
             </div>
         </div>
-    </div>       
+    </div>      
     <script type="text/javascript"
         src="js/main.min.js">
     </script>
