@@ -61,7 +61,8 @@ else{
     <title>Wild coffee | Newsletter</title>
 </head>
 <body class="font-text">
-    <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-secondary shadow-lg">
+    <nav class="navbar navbar-expand-md navbar-light bg-brown border-bottom 
+        border-secondary shadow">
         <a href="index.html"
             class="navbar-brand">
             <img class="img-fluid"
@@ -77,66 +78,66 @@ else{
             <ul class="navbar-nav ml-auto font-menu">
                 <li class="nav-item">
                     <a href="index.html"
-                        class="nav-link">
+                        class="nav-link text-yellow">
                         Home
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#"
-                        class="nav-link dropdown-toggle active"
+                        class="nav-link dropdown-toggle active text-yellow"
                         data-toggle="dropdown">
                         Products
                     </a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu py-0 bg-brown">
                         <a href="products/coffee.html"
-                            class="dropdown-item bg-secondary text-white">
+                            class="dropdown-item text-yellow">
                             Coffee
                         </a>
                         <a href="products/chocolate.html"
-                            class="dropdown-item">
+                            class="dropdown-item text-yellow">
                             Hot Chocolate
                         </a>
                         <a href="products/brewing.html"
-                            class="dropdown-item">
+                            class="dropdown-item text-yellow">
                             Brewing
                         </a>
                         <a href="products/spices.html"
-                            class="dropdown-item">
+                            class="dropdown-item text-yellow">
                             Spices
                         </a>
                         <a href="products/sweets.html"
-                            class="dropdown-item">
+                            class="dropdown-item text-yellow">
                             Sweets
                         </a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a href="about.html"
-                        class="nav-link">
+                        class="nav-link text-yellow">
                         About
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="press.html"
-                        class="nav-link">
+                        class="nav-link text-yellow">
                         Press
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="blog.html"
-                        class="nav-link">
+                        class="nav-link text-yellow">
                         Blog
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html"
-                        class="nav-link">
+                        class="nav-link text-yellow">
                         Contact
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="user.php"
-                        class="nav-link">
+                        class="nav-link text-yellow">
                         <span class="fa fa-user-circle-o"></span>
                     </a>
                 </li>
@@ -191,9 +192,9 @@ else{
             </div>
         </div>
     </section>
-    <footer class="container-fluid bg-dark border-top border-secondary">
+    <footer class="container-fluid bg-brown border-top border-secondary">
         <div class="row p-3">
-            <div class="col-xs-12 col-sm-6 order-1 order-sm-0">
+            <div class="col-12 col-sm-6 order-1 order-sm-0">
                 <ul class="list-inline icon-list text-center text-sm-left my-0">
                     <li class="list-inline-item">
                         <a href="https://www.facebook.com"
@@ -215,24 +216,23 @@ else{
                     </li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-6 order-0 order-sm-1">
+            <div class="col-12 col-sm-6 order-0 order-sm-1">
                 <div class="row">
-                    <form class="form-newsletter text-white mx-auto mr-sm-0" 
-                        action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+                    <form class="form-newsletter text-white mx-auto mr-sm-0 opacity-8" 
+                        action="newsletter.php"
                         autocomplete="off"
                         method="post"
                         required>
                         <div class="form-group font-header text-center text-sm-left">
                             <label>Join our mailing list</label>
                             <div class="input-group">
-                                <input class="form-control" 
+                                <input class="form-control rounded-0" 
                                     maxlength="80"
                                     name="newsmail" 
                                     type="email"
-                                    required
-                                    disabled>
+                                    required>
                                 <div class="input-group-append">
-                                    <input  class="btn btn-outline-light" 
+                                    <input class="btn btn-outline-light rounded-0" 
                                         type="submit" 
                                         value="Subscribe">
                                 </div>
@@ -242,15 +242,19 @@ else{
                 </div>
             </div>
         </div>
-        <div class="row mx-2 border-top border-secondary pt-1 font-menu">
-            <div class="col-xs-12 col-sm-6 text-center text-sm-left order-1 order-sm-0 p-1 p-sm-0">
-                <p class="mx-auto mb-0 text-light">Website demo, Copyright &copy; 2019</p>
+        <div class="row mx-2 border-top border-secondary pt-1 font-menu initialism">            
+            <div class="col-12 col-sm-6 text-center text-sm-left order-1 order-sm-0 p-1 p-sm-0">
+                <small class="mx-auto mb-0 text-light">Website demo, Copyright &copy; 2019-2020</small>
             </div>
-            <div class="col-xs-12 col-sm-6 text-center text-sm-right order-0 order-sm-1">
-                <a href="privacy.html" class="link link-white">Privacy &amp; Cookies</a>
+            <div class="col-12 col-sm-6 text-center text-sm-right order-0 order-sm-1">
+                <small>
+                    <a href="privacy.html" class="link link-white">
+                        Privacy &amp; Cookies
+                    </a>
+                </small>
             </div>
         </div>
-    </footer>   
+    </footer> 
     <div class="modal" id="privacyModal">
         <div class="modal-dialog text-menu font-menu">
             <div class="modal-content p-2">

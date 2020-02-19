@@ -1,7 +1,11 @@
 $brewing-s1-bg: "../img/brewing-s1-bg.jpg";
+$box-shadow: 1px 1px 3px #000;
 $chocolate-s1-bg: "../img/chocolate-s1-bg.jpg";
 $color-blk: #333;
+$color-brown: darken(#A52A2A,10%);
+$color-gray: #aaa;
 $color-wht: #fff;
+$color-yellow: darken(#FFFF00,5%);
 $coffee-s1-bg: "../img/coffee-s1-bg.jpg";
 $confirm-s1-bg: "../img/error-s1-bg.jpg";
 $error-s1-bg: "../img/error-s1-bg.jpg";
@@ -49,5 +53,7 @@ $section-third-height:
     "index-s3";
 $section-top-height:
     "index-s1";
+$shadow-black: 0 1px 3px $color-blk;
+$shadow-gray: 0 1px 3px $color-gray;
 $spices-s1-bg: "../img/spices-s1-bg.jpg";
 $sweets-s1-bg: "../img/sweets-s1-bg.jpg";

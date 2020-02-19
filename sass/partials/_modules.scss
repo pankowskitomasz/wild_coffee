@@ -2,8 +2,23 @@
     min-height: 50vh;
     width: 100%;
 }
-.bg-fixed{
-    background-attachment: fixed;
+.active{
+    .text-yellow{
+        color: darken($color-yellow,15%) !important;
+    }
+}
+.bg{
+    &-brown{
+        background-color: $color-brown;
+    }
+    &-fixed{
+        background-attachment: fixed;
+    }
+}
+.box{
+    &-shadow{
+        box-shadow: $box-shadow;
+    }
 }
 .brewing-s1{
     @include set-background($brewing-s1-bg);
@@ -20,6 +35,9 @@
 .dropdown-item{
     &:active{
         background-color: $color-blk;
+    }
+    &:hover{
+        color: darken($color-yellow,15%)!important;
     }
 }
 .error-s1{
@@ -104,6 +122,13 @@
         color: $color-wht !important;
     }
 }
+.navbar-light{
+    .navbar-nav{
+        .nav-link:focus, .nav-link:hover{
+            color: darken($color-yellow,15%)!important;
+        }
+    }
+}
 .opacity{
     &-8{
         opacity: 0.8;
@@ -117,6 +142,22 @@
 }
 .sweets-s1{
     @include set-background($sweets-s1-bg);
+}
+.text{
+    &-brown{
+        color: $color-brown !important;
+    }
+    &-shadow{
+        &-black{
+            text-shadow: $shadow-black;
+        }   
+        &-gray{
+            text-shadow: $shadow-gray;
+        }
+    }
+    &-yellow{
+        color: $color-yellow!important;
+    }
 }
 fieldset{
     margin-bottom: 15px;

@@ -196,220 +196,260 @@ body, html {
   width: 100%;
 }
 
-/* line 5, ../sass/partials/_modules.scss */
+/* line 6, ../sass/partials/_modules.scss */
+.active .text-yellow {
+  color: #999900 !important;
+}
+
+/* line 11, ../sass/partials/_modules.scss */
+.bg-brown {
+  background-color: #7c2020;
+}
+/* line 14, ../sass/partials/_modules.scss */
 .bg-fixed {
   background-attachment: fixed;
 }
 
-/* line 8, ../sass/partials/_modules.scss */
+/* line 19, ../sass/partials/_modules.scss */
+.box-shadow {
+  box-shadow: 1px 1px 3px #000;
+}
+
+/* line 23, ../sass/partials/_modules.scss */
 .brewing-s1 {
   background-image: url(../img/brewing-s1-bg.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 11, ../sass/partials/_modules.scss */
+/* line 26, ../sass/partials/_modules.scss */
 .chocolate-s1 {
   background-image: url(../img/chocolate-s1-bg.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 14, ../sass/partials/_modules.scss */
+/* line 29, ../sass/partials/_modules.scss */
 .coffee-s1 {
   background-image: url(../img/coffee-s1-bg.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 17, ../sass/partials/_modules.scss */
+/* line 32, ../sass/partials/_modules.scss */
 .confirm-s1 {
   background-image: url(../img/error-s1-bg.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 21, ../sass/partials/_modules.scss */
+/* line 36, ../sass/partials/_modules.scss */
 .dropdown-item:active {
   background-color: #333;
 }
+/* line 39, ../sass/partials/_modules.scss */
+.dropdown-item:hover {
+  color: #999900 !important;
+}
 
-/* line 25, ../sass/partials/_modules.scss */
+/* line 43, ../sass/partials/_modules.scss */
 .error-s1 {
   background-image: url(../img/error-s1-bg.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 29, ../sass/partials/_modules.scss */
+/* line 47, ../sass/partials/_modules.scss */
 .fit-contain {
   object-fit: contain;
 }
-/* line 32, ../sass/partials/_modules.scss */
+/* line 50, ../sass/partials/_modules.scss */
 .fit-cover {
   object-fit: cover;
 }
 
-/* line 37, ../sass/partials/_modules.scss */
+/* line 55, ../sass/partials/_modules.scss */
 .font-header {
   font-family: "Righteous", cursive;
 }
-/* line 40, ../sass/partials/_modules.scss */
+/* line 58, ../sass/partials/_modules.scss */
 .font-menu {
   font-family: "Josefin Sans", sans-serif;
 }
-/* line 43, ../sass/partials/_modules.scss */
+/* line 61, ../sass/partials/_modules.scss */
 .font-sign {
   font-family: "Satisfy", cursive;
 }
-/* line 46, ../sass/partials/_modules.scss */
+/* line 64, ../sass/partials/_modules.scss */
 .font-text {
   font-family: "Amatic SC", cursive;
 }
 
-/* line 51, ../sass/partials/_modules.scss */
+/* line 69, ../sass/partials/_modules.scss */
 .h-33vh {
   min-height: 33.33vh;
 }
-/* line 54, ../sass/partials/_modules.scss */
+/* line 72, ../sass/partials/_modules.scss */
 .h-50vh {
   min-height: 50vh;
 }
-/* line 57, ../sass/partials/_modules.scss */
+/* line 75, ../sass/partials/_modules.scss */
 .h-100vh {
   min-height: 100vh;
 }
 
-/* line 63, ../sass/partials/_modules.scss */
+/* line 81, ../sass/partials/_modules.scss */
 .hover-light:hover {
   filter: brightness(2);
 }
 
-/* line 69, ../sass/partials/_modules.scss */
+/* line 87, ../sass/partials/_modules.scss */
 .icon-list .fa {
   font-size: 25px;
 }
-/* line 72, ../sass/partials/_modules.scss */
+/* line 90, ../sass/partials/_modules.scss */
 .icon-list a {
   color: #fff;
 }
 
-/* line 77, ../sass/partials/_modules.scss */
+/* line 95, ../sass/partials/_modules.scss */
 .img-fit {
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
-/* line 82, ../sass/partials/_modules.scss */
+/* line 100, ../sass/partials/_modules.scss */
 .index-s2 {
   background-image: url(../img/index-s2/bg-xs.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 87, ../sass/partials/_modules.scss */
+/* line 105, ../sass/partials/_modules.scss */
 .index-s3__col-about {
   background-image: url(../img/index-s3/about-bg-xs.jpg);
   background-position: center center;
   background-size: cover;
 }
-/* line 90, ../sass/partials/_modules.scss */
+/* line 108, ../sass/partials/_modules.scss */
 .index-s3__col-press {
   background-image: url(../img/index-s3/press-bg-xs.jpg);
   background-position: center center;
   background-size: cover;
 }
-/* line 93, ../sass/partials/_modules.scss */
+/* line 111, ../sass/partials/_modules.scss */
 .index-s3__col-blog {
   background-image: url(../img/index-s3/blog-bg-xs.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 99, ../sass/partials/_modules.scss */
+/* line 117, ../sass/partials/_modules.scss */
 .link:hover, .icon-list a:hover {
   opacity: 0.6;
   text-decoration: none;
 }
-/* line 103, ../sass/partials/_modules.scss */
+/* line 121, ../sass/partials/_modules.scss */
 .link-white {
   color: #fff !important;
 }
 
-/* line 108, ../sass/partials/_modules.scss */
+/* line 127, ../sass/partials/_modules.scss */
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #999900 !important;
+}
+
+/* line 133, ../sass/partials/_modules.scss */
 .opacity-8 {
   opacity: 0.8;
 }
-/* line 111, ../sass/partials/_modules.scss */
+/* line 136, ../sass/partials/_modules.scss */
 .opacity-9 {
   opacity: 0.9;
 }
 
-/* line 115, ../sass/partials/_modules.scss */
+/* line 140, ../sass/partials/_modules.scss */
 .spices-s1 {
   background-image: url(../img/spices-s1-bg.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 118, ../sass/partials/_modules.scss */
+/* line 143, ../sass/partials/_modules.scss */
 .sweets-s1 {
   background-image: url(../img/sweets-s1-bg.jpg);
   background-position: center center;
   background-size: cover;
 }
 
-/* line 121, ../sass/partials/_modules.scss */
+/* line 147, ../sass/partials/_modules.scss */
+.text-brown {
+  color: #7c2020 !important;
+}
+/* line 151, ../sass/partials/_modules.scss */
+.text-shadow-black {
+  text-shadow: 0 1px 3px #333;
+}
+/* line 154, ../sass/partials/_modules.scss */
+.text-shadow-gray {
+  text-shadow: 0 1px 3px #aaa;
+}
+/* line 158, ../sass/partials/_modules.scss */
+.text-yellow {
+  color: #e6e600 !important;
+}
+
+/* line 162, ../sass/partials/_modules.scss */
 fieldset {
   margin-bottom: 15px;
 }
 
-/* line 124, ../sass/partials/_modules.scss */
+/* line 165, ../sass/partials/_modules.scss */
 input {
   margin-bottom: 5px;
 }
 
-/* line 127, ../sass/partials/_modules.scss */
+/* line 168, ../sass/partials/_modules.scss */
 textarea {
   height: 150px !important;
   resize: none;
 }
 
 @media all and (min-width: 576px) {
-  /* line 134, ../sass/partials/_modules.scss */
+  /* line 175, ../sass/partials/_modules.scss */
   .h-sm-33vh {
     min-height: 33.33vh;
   }
-  /* line 137, ../sass/partials/_modules.scss */
+  /* line 178, ../sass/partials/_modules.scss */
   .h-sm-50vh {
     min-height: 50vh;
   }
-  /* line 140, ../sass/partials/_modules.scss */
+  /* line 181, ../sass/partials/_modules.scss */
   .h-sm-100vh {
     min-height: 100vh;
   }
 
-  /* line 145, ../sass/partials/_modules.scss */
+  /* line 186, ../sass/partials/_modules.scss */
   .index-s2 {
     background-image: url(../img/index-s2/bg-sm.jpg);
     background-position: center center;
     background-size: cover;
   }
 
-  /* line 150, ../sass/partials/_modules.scss */
+  /* line 191, ../sass/partials/_modules.scss */
   .index-s3__col-about {
     background-image: url(../img/index-s3/about-bg-sm.jpg);
     background-position: center center;
     background-size: cover;
   }
-  /* line 153, ../sass/partials/_modules.scss */
+  /* line 194, ../sass/partials/_modules.scss */
   .index-s3__col-press {
     background-image: url(../img/index-s3/press-bg-sm.jpg);
     background-position: center center;
     background-size: cover;
   }
-  /* line 156, ../sass/partials/_modules.scss */
+  /* line 197, ../sass/partials/_modules.scss */
   .index-s3__col-blog {
     background-image: url(../img/index-s3/blog-bg-sm.jpg);
     background-position: center center;
@@ -417,39 +457,39 @@ textarea {
   }
 }
 @media all and (min-width: 768px) {
-  /* line 165, ../sass/partials/_modules.scss */
+  /* line 206, ../sass/partials/_modules.scss */
   .h-md-33vh {
     min-height: 33.33vh;
   }
-  /* line 168, ../sass/partials/_modules.scss */
+  /* line 209, ../sass/partials/_modules.scss */
   .h-md-50vh {
     min-height: 50vh;
   }
-  /* line 171, ../sass/partials/_modules.scss */
+  /* line 212, ../sass/partials/_modules.scss */
   .h-md-100vh {
     min-height: 100vh;
   }
 
-  /* line 176, ../sass/partials/_modules.scss */
+  /* line 217, ../sass/partials/_modules.scss */
   .index-s2 {
     background-image: url(../img/index-s2/bg-md.jpg);
     background-position: center center;
     background-size: cover;
   }
 
-  /* line 181, ../sass/partials/_modules.scss */
+  /* line 222, ../sass/partials/_modules.scss */
   .index-s3__col-about {
     background-image: url(../img/index-s3/about-bg-md.jpg);
     background-position: center center;
     background-size: cover;
   }
-  /* line 184, ../sass/partials/_modules.scss */
+  /* line 225, ../sass/partials/_modules.scss */
   .index-s3__col-press {
     background-image: url(../img/index-s3/press-bg-md.jpg);
     background-position: center center;
     background-size: cover;
   }
-  /* line 187, ../sass/partials/_modules.scss */
+  /* line 228, ../sass/partials/_modules.scss */
   .index-s3__col-blog {
     background-image: url(../img/index-s3/blog-bg-md.jpg);
     background-position: center center;
@@ -457,26 +497,26 @@ textarea {
   }
 }
 @media all and (min-width: 992px) {
-  /* line 194, ../sass/partials/_modules.scss */
+  /* line 235, ../sass/partials/_modules.scss */
   .index-s2 {
     background-image: url(../img/index-s2/bg-lg.jpg);
     background-position: center center;
     background-size: cover;
   }
 
-  /* line 199, ../sass/partials/_modules.scss */
+  /* line 240, ../sass/partials/_modules.scss */
   .index-s3__col-about {
     background-image: url(../img/index-s3/about-bg-lg.jpg);
     background-position: center center;
     background-size: cover;
   }
-  /* line 202, ../sass/partials/_modules.scss */
+  /* line 243, ../sass/partials/_modules.scss */
   .index-s3__col-press {
     background-image: url(../img/index-s3/press-bg-lg.jpg);
     background-position: center center;
     background-size: cover;
   }
-  /* line 205, ../sass/partials/_modules.scss */
+  /* line 246, ../sass/partials/_modules.scss */
   .index-s3__col-blog {
     background-image: url(../img/index-s3/blog-bg-lg.jpg);
     background-position: center center;
