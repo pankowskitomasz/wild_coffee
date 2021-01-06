@@ -109,10 +109,10 @@ body, html {
 
 /* line 8, ../sass/partials/_layout.scss */
 .section-top-fit, .index-s1 {
-  height: calc(100vh - 60px);
-  height: -o-calc(100vh - 60px);
-  height: -moz-calc(100vh - 60px);
-  height: -webkit-calc(100vh - 60px);
+  height: calc(50vh - 0px);
+  height: -o-calc(50vh - 0px);
+  height: -moz-calc(50vh - 0px);
+  height: -webkit-calc(50vh - 0px);
 }
 
 /* line 24, ../sass/partials/_mixins.scss */
@@ -156,11 +156,6 @@ body, html {
 }
 
 /* line 24, ../sass/partials/_mixins.scss */
-.index-s2 {
-  min-height: 100vh;
-}
-
-/* line 24, ../sass/partials/_mixins.scss */
 .newsletter-s1 {
   min-height: 100vh;
 }
@@ -183,6 +178,11 @@ body, html {
 /* line 24, ../sass/partials/_mixins.scss */
 .spices-s1 {
   min-height: 100vh;
+}
+
+/* line 24, ../sass/partials/_mixins.scss */
+.index-s2 {
+  min-height: 50vh;
 }
 
 /* line 24, ../sass/partials/_mixins.scss */

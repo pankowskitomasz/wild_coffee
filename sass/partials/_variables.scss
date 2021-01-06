@@ -10,6 +10,7 @@ $font-text: 'Amatic SC', cursive;
 $font-header: 'Righteous', cursive;
 $font-sign: 'Satisfy', cursive;
 $full-height: 100vh;
+$half-height: 50vh;
 $third-height: 33vh;
 $icon-color: $color-wht;
 $icon-menu-size: 25px;
@@ -39,12 +40,13 @@ $section-full-height:
     "confirm-s1",
     "contact-s1",
     "error-s1",
-    "index-s2",
     "newsletter-s1",
     "press-s1",
     "privacy-s1",
     "sweets-s1",
     "spices-s1";
+$section-half-height:
+    "index-s2";
 $section-third-height:
     "index-s3";
 $section-top-height:
