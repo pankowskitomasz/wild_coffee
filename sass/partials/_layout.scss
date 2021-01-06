@@ -6,9 +6,10 @@ body,html{
 }
 
 .section-top-fit{
-    @include set-calc-height($full-height,$navbar-height);
+    @include set-calc-height(50vh,0px);
 }
 
 @include include-class($section-top-height,".section-top-fit");
 @include set-height($section-full-height,$full-height);
+@include set-height($section-half-height,$half-height);
 @include set-height($section-third-height,$third-height);
