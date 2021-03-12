@@ -294,8 +294,6 @@ else{
             </div>
         </div>
     </div>   
-    <script type="text/javascript"
-        src="js/main.min.js">
-    </script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
