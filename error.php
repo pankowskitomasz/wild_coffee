@@ -144,8 +144,7 @@
                     <form class="form-newsletter text-white mx-auto mr-sm-0" 
                         action="newsletter.php"
                         autocomplete="off"
-                        method="post"
-                        required>
+                        method="post">
                         <div class="form-group font-header text-center text-sm-left">
                             <label>Join our mailing list</label>
                             <div class="input-group">
@@ -219,8 +218,6 @@
             </div>
         </div>
     </div>       
-    <script type="text/javascript"
-        src="js/main.min.js">
-    </script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
